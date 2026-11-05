@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Glitchwave: platformer de acțiune în stil pixel și neon. Aleargă, sari și șterge virusul din oraș. Joacă demo-ul în pagină.">
+  <meta name="theme-color" content="#0a0614">
+  <title>Glitchwave | Joc indie pixel art</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="#acasa">GLITCH<span>WAVE</span></a>
+    <nav id="nav" aria-label="Navigare principală">
+      <a href="#despre">Joc</a>
+      <a href="#demo">Demo</a>
+      <a href="#lumi">Lumi</a>
+      <a href="#editii">Ediții</a>
+      <a class="btn btn-small" href="#wishlist">Wishlist</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="acasa">
+      <div class="sun" aria-hidden="true"></div>
+      <div class="grid-floor" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="tag">▶ Platformer de acțiune · PC și consolă</p>
+        <h1 class="glitch" data-text="GLITCHWAVE">GLITCHWAVE</h1>
+        <p class="lead">Orașul a fost infectat cu un virus. Aleargă, sari și rescrie codul înainte să se prăbușească totul.</p>
+        <div class="countdown" id="countdown" aria-label="Timp rămas până la lansare"></div>
+        <div class="hero-actions">
+          <a class="btn" href="#wishlist">Adaugă în wishlist</a>
+          <a class="btn btn-ghost" href="#demo">Joacă demo-ul</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="despre">
+      <div class="section-head reveal">
+        <p class="eyebrow">Despre joc</p>
+        <h2>Rapid. Neon. Fără milă.</h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal"><h3>12 niveluri</h3><p>Trei lumi diferite, fiecare cu propriile capcane și muzică.</p></article>
+        <article class="card reveal"><h3>4 boss-uri</h3><p>Fiecare luptă îți cere să înveți tiparul și să sari la momentul potrivit.</p></article>
+        <article class="card reveal"><h3>Comenzi precise</h3><p>Sărituri cu control exact, dash în aer și ritm de arcadă.</p></article>
+        <article class="card reveal"><h3>Coloană sonoră synthwave</h3><p>Peste 40 de minute de muzică originală, care se schimbă cu acțiunea.</p></article>
+        <article class="card reveal"><h3>Moduri de dificultate</h3><p>De la relaxat la „fără greșeli”, ca fiecare să își găsească ritmul.</p></article>
+        <article class="card reveal"><h3>Speedrun</h3><p>Cronometru în joc și clasamente online pentru cei mai rapizi.</p></article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="demo">
+      <div class="section-head reveal">
+        <p class="eyebrow">Demo</p>
+        <h2>Joacă un nivel de test</h2>
+      </div>
+      <div class="arcade reveal">
+        <canvas id="game" width="640" height="240" aria-label="Mini-joc: sari peste obstacole"></canvas>
+        <div class="arcade-bar">
+          <span>SCOR <b id="score">0</b></span>
+          <span class="hint">SPAȚIU sau ATINGE ca să sari</span>
+          <span>REC <b id="best">0</b></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="lumi">
+      <div class="section-head reveal">
+        <p class="eyebrow">Lumi</p>
+        <h2>Trei lumi de cucerit</h2>
+      </div>
+      <div class="worlds reveal">
+        <div class="tabs" id="tabs" role="tablist" aria-label="Lumile jocului"></div>
+        <div class="world" id="world">
+          <div class="world-art" aria-hidden="true"></div>
+          <div class="world-text">
+            <h3 id="worldName"></h3>
+            <p id="worldText"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="editii">
+      <div class="section-head reveal">
+        <p class="eyebrow">Ediții</p>
+        <h2>Alege-ți ediția</h2>
+      </div>
+      <div class="plans">
+        <article class="plan reveal">
+          <h3>Standard</h3>
+          <p class="price">59 lei</p>
+          <ul><li>Jocul complet</li><li>Actualizări gratuite</li></ul>
+          <a class="btn btn-ghost" href="#wishlist">Vreau Standard</a>
+        </article>
+        <article class="plan plan-top reveal">
+          <span class="tag-top">Recomandat</span>
+          <h3>Deluxe</h3>
+          <p class="price">99 lei</p>
+          <ul><li>Jocul complet</li><li>Coloana sonoră digitală</li><li>Costum neon exclusiv</li></ul>
+          <a class="btn" href="#wishlist">Vreau Deluxe</a>
+        </article>
+        <article class="plan reveal">
+          <h3>Collector</h3>
+          <p class="price">199 lei</p>
+          <ul><li>Tot din Deluxe</li><li>Artbook digital</li><li>Numele tău în genericul final</li></ul>
+          <a class="btn btn-ghost" href="#wishlist">Vreau Collector</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="wishlist">
+      <div class="split">
+        <div class="reveal">
+          <p class="eyebrow">Wishlist</p>
+          <h2>Fii primul care joacă</h2>
+          <p>Lasă-ne emailul și te anunțăm când se deschid precomenzile și când apare demo-ul complet.</p>
+        </div>
+        <form class="form reveal" id="signup" novalidate>
+          <label>Email
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <label>Platforma ta
+            <select name="platform" required>
+              <option value="">Alege</option>
+              <option>PC</option>
+              <option>Consolă</option>
+              <option>Ambele</option>
+            </select>
+          </label>
+          <p class="msg" id="msg" role="status"></p>
+          <button class="btn" type="submit">Intră pe listă</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="intrebari">
+      <div class="section-head reveal">
+        <p class="eyebrow">Întrebări</p>
+        <h2>Ce ne întreabă jucătorii</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>Pe ce platforme apare?</summary>
+          <p>PC (Windows, Linux) și console de ultimă generație, în același timp.</p>
+        </details>
+        <details>
+          <summary>Se poate juca cu controller?</summary>
+          <p>Da, cu orice controller, și cu tastatura. Comenzile se pot reconfigura.</p>
+        </details>
+        <details>
+          <summary>Cât durează o rulare completă?</summary>
+          <p>Aproximativ 6 ore la prima parcurgere și sub o oră pentru cei care fac speedrun.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="logo">GLITCH<span>WAVE</span></span>
+    <p>salut@glitchwave.example</p>
+    <p>&copy; 2026 Glitchwave. Proiect demonstrativ.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
