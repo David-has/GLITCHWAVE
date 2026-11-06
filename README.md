@@ -2,7 +2,6 @@
 
 A landing page for a fictional indie game with a pixel art and neon aesthetic: an action platformer featuring colorful worlds, boss fights, and a synthwave soundtrack. The page includes a mini-game that can be played directly in the browser and is fully responsive across mobile, tablet, and desktop devices.
 
-**Demo:** https://YOUR_USERNAME.github.io/glitchwave/
 
 ## Features
 
